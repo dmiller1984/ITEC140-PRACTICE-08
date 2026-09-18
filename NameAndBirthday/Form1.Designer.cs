@@ -14,11 +14,11 @@ partial class Form1
     private void InitializeComponent()
     {
         lblFN = new Label();
-        textBox1 = new TextBox();
+        txtFN = new TextBox();
         lblLN = new Label();
         dtpBD = new Label();
-        textBox2 = new TextBox();
-        dateTimePicker1 = new DateTimePicker();
+        txtLN = new TextBox();
+        dtp = new DateTimePicker();
         btnDisplay = new Button();
         btnClear = new Button();
         btnExit = new Button();
@@ -34,12 +34,12 @@ partial class Form1
         lblFN.TabIndex = 0;
         lblFN.Text = "First Name:";
         // 
-        // textBox1
+        // txtFN
         // 
-        textBox1.Location = new Point(76, 32);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new Size(100, 23);
-        textBox1.TabIndex = 1;
+        txtFN.Location = new Point(76, 32);
+        txtFN.Name = "txtFN";
+        txtFN.Size = new Size(100, 23);
+        txtFN.TabIndex = 1;
         // 
         // lblLN
         // 
@@ -59,20 +59,20 @@ partial class Form1
         dtpBD.TabIndex = 3;
         dtpBD.Text = "Birth Date:";
         // 
-        // textBox2
+        // txtLN
         // 
-        textBox2.Location = new Point(254, 35);
-        textBox2.Name = "textBox2";
-        textBox2.Size = new Size(113, 23);
-        textBox2.TabIndex = 4;
+        txtLN.Location = new Point(254, 35);
+        txtLN.Name = "txtLN";
+        txtLN.Size = new Size(113, 23);
+        txtLN.TabIndex = 4;
         // 
-        // dateTimePicker1
+        // dtp
         // 
-        dateTimePicker1.Format = DateTimePickerFormat.Short;
-        dateTimePicker1.Location = new Point(441, 33);
-        dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new Size(95, 23);
-        dateTimePicker1.TabIndex = 5;
+        dtp.Format = DateTimePickerFormat.Short;
+        dtp.Location = new Point(441, 33);
+        dtp.Name = "dtp";
+        dtp.Size = new Size(95, 23);
+        dtp.TabIndex = 5;
         // 
         // btnDisplay
         // 
@@ -82,6 +82,7 @@ partial class Form1
         btnDisplay.TabIndex = 7;
         btnDisplay.Text = "Display:";
         btnDisplay.UseVisualStyleBackColor = true;
+        btnDisplay.Click += btnDisplay_Click;
         // 
         // btnClear
         // 
@@ -91,6 +92,7 @@ partial class Form1
         btnClear.TabIndex = 8;
         btnClear.Text = "Clear";
         btnClear.UseVisualStyleBackColor = true;
+        btnClear.Click += btnClear_Click;
         // 
         // btnExit
         // 
@@ -100,6 +102,7 @@ partial class Form1
         btnExit.TabIndex = 9;
         btnExit.Text = "Exit";
         btnExit.UseVisualStyleBackColor = true;
+        btnExit.Click += btnExit_Click;
         // 
         // lblResult
         // 
@@ -107,7 +110,6 @@ partial class Form1
         lblResult.Name = "lblResult";
         lblResult.Size = new Size(460, 70);
         lblResult.TabIndex = 10;
-        lblResult.Text = "label1";
         // 
         // Form1
         // 
@@ -118,11 +120,11 @@ partial class Form1
         Controls.Add(btnExit);
         Controls.Add(btnClear);
         Controls.Add(btnDisplay);
-        Controls.Add(dateTimePicker1);
-        Controls.Add(textBox2);
+        Controls.Add(dtp);
+        Controls.Add(txtLN);
         Controls.Add(dtpBD);
         Controls.Add(lblLN);
-        Controls.Add(textBox1);
+        Controls.Add(txtFN);
         Controls.Add(lblFN);
         Name = "Form1";
         Text = "Name and Date practice form";
@@ -131,11 +133,11 @@ partial class Form1
     }
 
     private Label lblFN;
-    private TextBox textBox1;
+    private TextBox txtFN;
     private Label lblLN;
     private Label dtpBD;
-    private TextBox textBox2;
-    private DateTimePicker dateTimePicker1;
+    private TextBox txtLN;
+    private DateTimePicker dtp;
     private Button btnDisplay;
     private Button btnClear;
     private Button btnExit;

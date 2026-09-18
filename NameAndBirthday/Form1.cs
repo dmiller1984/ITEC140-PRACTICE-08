@@ -6,4 +6,21 @@ public partial class Form1 : Form
     {
         InitializeComponent();
     }
+
+    private void btnDisplay_Click(object sender, EventArgs e)
+    {
+        lblResult.Text = txtFN.Text +" "+ txtLN.Text +" " + dtp.Text;
+    }
+
+    private void btnClear_Click(object sender, EventArgs e)
+    {
+        lblResult.Text = "";
+        txtFN.Text = "";
+        txtLN.Text = "";
+    }
+
+    private void btnExit_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
 }
